@@ -21,4 +21,9 @@ class Datawakif extends Model
         'image',
         'catatan',
     ];
+
+    public function wakafmasuk($query){
+
+        return $query->whereHas('wakafpembangunan', '>', 0)->where('wakafproduktif', '>', 0)->where('donasipendidikan', '>', 0);
+    }
 }

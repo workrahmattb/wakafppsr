@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\PDFController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PDFController;
+use App\Http\Controllers\DatawakifController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [DatawakifController::class, 'index']);
+
+Route::get('/cc', function () {
+    return view('cerdascermat');
 });
 
-Route::get('laporan',[PDFController::class, 'downloadpdf'])->name('laporan');
-Route::get('kwitansi/{id}',[PDFController::class, 'wakifpdf'])->name('pdf');
+Route::get('laporan', [PDFController::class, 'downloadpdf'])->name('laporan');
+Route::get('kwitansi/{id}', [PDFController::class, 'wakifpdf'])->name('pdf');

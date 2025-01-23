@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-item .nav-link {
+    font-size: 1.125rem;
+    margin-left: 0.313rem;
+    margin-right: 0.313rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 40px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    text-shadow: 34px px black;
+}
+#hero {
+    background-color: #f8f9fa;
+    background-image: url("../images/background_images.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70rem;
+}
+
+.hero-title {
+    padding-top: 15.625rem;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 700;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+}
+
+thead,
+tfoot {
+    background-color: rgb(228 240 245);
+}
+
+th,
+td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+}
+
+td:last-of-type {
+    text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+    background-color: rgb(237 238 242);
+}
+
+tfoot th {
+    text-align: right;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+@page {
+    size: landscape;
+}

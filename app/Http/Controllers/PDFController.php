@@ -15,12 +15,12 @@ class PDFController extends Controller
 
         $data = [
             'datawakifs' => $datawakifs,
-            'date' => date('d-m-Y')
+            'date' => date('d F Y H:i:s')
         ];
 
         $pdf = PDF::loadView('datawakifPDF', $data);
 
-        return $pdf->download('datawakif.pdf');
+        return $pdf->download('LaporanZiswafPPSR.pdf');
     }
 
     public function wakifpdf($id){
@@ -31,6 +31,6 @@ class PDFController extends Controller
             'datawakifs' => $datawakifs
         ];
         $pdf = PDF::loadView('kwitansiwakifPDF', $data);
-        return $pdf->download('kwitansiwakif.pdf');
+        return $pdf->kwitansi('kwitansiwakif.pdf');
     }
 }
